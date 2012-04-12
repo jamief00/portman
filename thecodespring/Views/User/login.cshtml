@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "login";
+}
+
+@section AddToHead{
+ 	<link type="text/css" rel="stylesheet" href="../../css/openid.css" />
+	<script type="text/javascript" src="../../scripts/openid-jquery.js"></script>
+	<script type="text/javascript" src="../../scripts/openid-en.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        openid.init('openid_identifier');
+	        openid.setDemoMode(false); //Stops form submission for client javascript-only test purposes
+	    });
+	</script>
+}
+<h2>login</h2>
+
+
+
+	<p>You must log in before entering the Members Area: </p>
+    @using Microsoft.Web.Mvc;
+    @using (Html.BeginForm<thecodespring.Controllers.UserController>(u => u.Authenticate(Request.QueryString["returnUrl"]), FormMethod.Post, new { id = "openid_form"}))
+    {
+	
+        <fieldset>
+			<legend>Sign-in or Create New Account</legend>
+			<div id="openid_choice">
+				<p>Please click your account provider:</p>
+				<div id="openid_btns"></div>
+			</div>
+			<div id="openid_input_area">
+				 <input id="openid_identifier" name="openid_identifier" type="text" value="http://" />
+	    <input type="submit" value="Login" id="openid_submit" />
+			</div>
+			<noscript>
+				<p>OpenID is service that allows you to log-on to many different websites using a single indentity.
+				Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>
+			</noscript>
+		</fieldset>
+   
+    }
+	<script type="text/javascript">
+	    document.getElementById("openid_identifier").focus();
+	</script>

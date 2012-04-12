@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thecodespring", "thecodespring\thecodespring.csproj", "{AEF6ACD5-A7F4-4F2A-A49C-146AE9F83BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thecodespring.quotes", "thecodespring.services\thecodespring.quotes.csproj", "{349BBC66-0159-4141-A13B-5A86A9073560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thecodespring.model", "thecodespring.model\thecodespring.model.csproj", "{077EFC96-0552-4B6A-9378-6A966E93F79F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF6ACD5-A7F4-4F2A-A49C-146AE9F83BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF6ACD5-A7F4-4F2A-A49C-146AE9F83BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF6ACD5-A7F4-4F2A-A49C-146AE9F83BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF6ACD5-A7F4-4F2A-A49C-146AE9F83BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349BBC66-0159-4141-A13B-5A86A9073560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349BBC66-0159-4141-A13B-5A86A9073560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349BBC66-0159-4141-A13B-5A86A9073560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349BBC66-0159-4141-A13B-5A86A9073560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077EFC96-0552-4B6A-9378-6A966E93F79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077EFC96-0552-4B6A-9378-6A966E93F79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077EFC96-0552-4B6A-9378-6A966E93F79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077EFC96-0552-4B6A-9378-6A966E93F79F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,116 @@
+﻿@model thecodespring.Models.StockQuoteViewModel
+
+@{
+    ViewBag.Title = "thecodespring:portfolio";
+}
+
+
+
+<div id="container"> 
+	<div id="main"> 
+
+
+        <table id="data" class="data">
+        <tfoot>
+
+            <tr>
+                @{
+                    if (!@Model.IsEmpty())
+                    {
+                        List<KeyValuePair<DateTime, Double>> dates = ViewData["results"] as List<KeyValuePair<DateTime, Double>>;
+                        int i = 0;
+                        foreach (thecodespring.model.StockQuote quote in Model.HistoricalQuotes.Quotes)
+                        {
+
+                            if (++i % 2 == 0)
+                            {
+                                    <text><th>@quote.PriceTime.Day/@quote.PriceTime.Month</th></text>
+                            }
+                            else
+                            {
+                                <th></th>
+                            }
+                        }
+                    }
+                }
+
+        </tr>
+           
+            </tfoot>
+            <tbody>
+                <tr>
+                    @{
+                        if (!@Model.IsEmpty())
+                        {
+                            List<KeyValuePair<DateTime, Double>> results = ViewData["results"] as List<KeyValuePair<DateTime, Double>>;
+
+
+                            foreach (thecodespring.model.StockQuote quote in Model.HistoricalQuotes.Quotes)
+                            {
+                                 <text><td>@quote.Price</td></text>
+                            }
+                        }
+                     }
+
+
+                     </tr> 
+            </tbody> 
+        </table> 
+                @using (Html.BeginForm())
+                {
+                    
+                    
+                    <div class="fieldContainer">
+			            <div class="formRow">
+	                        <div class="label">
+		                        <label for="name">tidm</label>
+	                        </div>
+
+	                        <div class="field">
+		                        @Html.TextBox("Symbol", ViewData["Symbol"], new { maxlength = 6 })
+	                        </div>
+                        </div>
+
+
+                        <div class="formRow">
+	                        <div class="label">
+		                        <label for="name">days</label>
+	                        </div>
+
+	                        <div class="field">
+		                        @Html.TextBox("days", ViewData["days"], new { maxlength = 3 })
+	                        </div>
+                        </div>
+
+                        <div class="formRow">
+	                        <div class="label">
+                                &nbsp;
+	                        </div>
+
+	                        <div class="field">
+                                <div class="signupButton">
+			                        <input type="submit" name="submit" id="submit" value="get prices" />
+		                        </div>
+	                        </div>
+                        </div>
+
+
+
+
+		            </div>
+
+		          
+                   
+                }
+
+
+                    
+                        
+
+        
+	</div> 
+	<div id="holder"></div> 
+	<footer> 
+ 
+	</footer> 
+</div> <!--! end of #container --> 

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "index";
+}
+
+@using Microsoft.Web.Mvc;
+@(Html.ActionLink<thecodespring.Controllers.UserController>(u => u.Login(), "Login"))
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <text>@User.Identity.Name</text>
+
+}
