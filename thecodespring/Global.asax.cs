@@ -30,6 +30,12 @@ namespace thecodespring
             //    new { controller = "Portfolio", action = "Index", symbol = "AST.L", days = 45 } // Parameter defaults
             //);
             routes.MapRoute(
+                "Portfolio", // Route name
+                "{controller}/{action}/{symbol}/{days}" );
+
+
+        
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}", // URL with parameters
                 new { controller = "Home", action = "Index" } // Parameter defaults

@@ -58,8 +58,6 @@ namespace thecodespring.services.Quote
                 session.SaveChanges();
             }
 
-            // if a refresh is required, grab all the data and then insert into ravendb
-
             return historicalQuote;
 
         }

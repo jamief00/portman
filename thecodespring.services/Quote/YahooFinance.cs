@@ -32,6 +32,8 @@ namespace thecodespring.services.Quote
             {
                 request = (HttpWebRequest)WebRequest.CreateDefault(new Uri(url));
                 request.Timeout = 300000;
+                request.Proxy.Credentials = CredentialCache.DefaultCredentials;
+
 
                 response = (HttpWebResponse)request.GetResponse();
 
