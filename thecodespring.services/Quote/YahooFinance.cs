@@ -32,11 +32,9 @@ namespace thecodespring.services.Quote
             {
                 request = (HttpWebRequest)WebRequest.CreateDefault(new Uri(url));
                 request.Timeout = 300000;
-                request.Proxy.Credentials = CredentialCache.DefaultCredentials;
-
+                //request.Proxy.Credentials = CredentialCache.DefaultCredentials;
 
                 response = (HttpWebResponse)request.GetResponse();
-
                 stReader = new StreamReader(response.GetResponseStream(), true);
 
                 stReader.ReadLine();//skip the first (header row)
