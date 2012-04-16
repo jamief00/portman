@@ -67,9 +67,9 @@ namespace thecodespring.services.Quote
 
                 return results;
             }
-            catch
+            catch(Exception e)
             {
-                return null;
+                throw e;
             }
 
         }
